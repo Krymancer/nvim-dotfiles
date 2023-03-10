@@ -155,6 +155,17 @@ return require('packer').startup(function(use)
         end
     }
 
+    use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      }
+    }
+
+    use 'mg979/vim-visual-multi'
+
+    use 'akinsho/toggleterm.nvim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
