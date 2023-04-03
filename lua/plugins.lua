@@ -37,7 +37,7 @@ return require('packer').startup(function(use)
 
   -- Git 
   use "tpope/vim-fugitive"
-  
+
   -- Autopair
   use {
 	"windwp/nvim-autopairs",
@@ -167,6 +167,8 @@ return require('packer').startup(function(use)
     use 'akinsho/toggleterm.nvim'
 
     use 'jose-elias-alvarez/null-ls.nvim'
+
+    use "lukas-reineke/indent-blankline.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

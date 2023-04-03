@@ -40,10 +40,12 @@ vim.opt.shortmess:append("c")
 vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.iskeyword:append("-")
 vim.opt.list = true
-vim.opt.listchars = { tab = "▸ ", trail = "·", extends = "»", precedes = "«", nbsp = "␣" }
+--vim.opt.listchars = { tab = "▸ ", trail = "·", extends = "»", precedes = "«", nbsp = "␣" }
 vim.g.neovide_transparency = 0.8
 vim.g.neovide_floating_opacity = 0.9
 
+-- Integrate terminal use powershell as neovim uses cmd for some reason
+-- If not using windows this is break terminal
 vim.o.shell = 'pwsh'
 vim.o.shellcmdflag = '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
 vim.o.shellredir = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
